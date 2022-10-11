@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PaymentController;
+use App\Models\Payment;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* Store payment data into database */
+// Route::post('webhook', [PaymentController::class, 'stripepost']);
